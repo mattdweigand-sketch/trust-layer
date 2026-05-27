@@ -1,16 +1,16 @@
-# Trust Layer
+# Evidence Map
 
-Trust Layer is a portable workflow for making AI-assisted deliverables inspectable.
+Evidence Map is a portable workflow for making AI-assisted deliverables inspectable.
 
 It helps teams create source-grounded decks, memos, workbook reviews, questionnaires, diligence summaries, and operating reports without losing track of where the facts came from.
 
 ```text
-Truth layer first. Artifact second.
+Evidence first. Artifact second.
 ```
 
 ## What It Produces
 
-A Trust Layer run creates an audit trail before the final artifact is shared:
+An Evidence Map run creates an audit trail before the final artifact is shared:
 
 - setup check
 - source packet
@@ -37,7 +37,7 @@ deliverables/<project-name>/
 
 Polished artifacts can still be wrong.
 
-Trust Layer is designed to catch common failure modes:
+Evidence Map is designed to catch common failure modes:
 
 - unsupported claims
 - stale numbers
@@ -73,4 +73,4 @@ npm run setup
 - [Concepts](concepts.md)
 - [Office Risk Taxonomy](office-risk-taxonomy.md)
 - [Intake Template](workflow-templates/intake.md)
-- [GitHub Repository](https://github.com/mattdweigand-sketch/trust-layer)
+- [GitHub Repository](https://github.com/mattdweigand-sketch/evidence-map)

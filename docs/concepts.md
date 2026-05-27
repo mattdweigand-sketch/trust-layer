@@ -1,8 +1,8 @@
 # Concepts
 
-## Trust Layer
+## Evidence Map Workflow
 
-The Trust Layer is the inspectable substrate beneath a polished artifact. It records sources, claims, assumptions, calculations, conflicts, and review status before the artifact travels.
+The Evidence Map workflow is the inspectable substrate beneath a polished artifact. It records sources, claims, assumptions, calculations, conflicts, and review status before the artifact travels.
 
 ## Source Packet
 

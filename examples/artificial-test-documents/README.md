@@ -1,12 +1,12 @@
 # Artificial Test Documents
 
-Use these files to test the Trust Layer workflow.
+Use these files to test the Evidence Map workflow.
 
 Point a repo-tied chat at this folder and say:
 
 ```text
-Run the Trust Layer workflow.
-Use .Codex/commands/trust-layer.md.
+Run the Evidence Map workflow.
+Use .Codex/commands/evidence-map.md.
 Use examples/artificial-test-documents as the source folder.
 The target artifact is a 5-slide board update deck for the May 2026 board meeting.
 Start with the source packet and stop before the file spec.

@@ -38,7 +38,7 @@ const finalFormat = await ask("Final format needed", artifactType);
 const sources = await ask("Source files or folder");
 const reviewer = await ask("Human reviewer or owner", "TBD");
 const deadline = await ask("Deadline", "TBD");
-const projectName = await ask("Project name", slugify(useCase || artifactType || "trust-layer-run"));
+const projectName = await ask("Project name", slugify(useCase || artifactType || "evidence-map-run"));
 
 rl?.close();
 
@@ -88,7 +88,7 @@ Setup status: ready
 - None captured during kickoff.
 `;
 
-const intake = `# Trust Layer Intake
+const intake = `# Evidence Map Intake
 
 ## Artifact Goal
 
@@ -115,9 +115,9 @@ ${sources}
 
 ## Workflow Request
 
-Run the Trust Layer workflow for this artifact.
+Run the Evidence Map workflow for this artifact.
 
-Use .Codex/commands/trust-layer.md as the operating procedure.
+Use .Codex/commands/evidence-map.md as the operating procedure.
 Start with the setup check in ${outputDir}/01-setup-check/setup-check.md.
 Do not analyze sources until the setup check is ready.
 Do not create the final artifact until I approve the source packet, file spec, and hostile review.
@@ -125,9 +125,9 @@ Save outputs under ${outputDir}/.
 Stop and ask me before resolving decision-critical conflicts.
 `;
 
-const nextPrompt = `Run the Trust Layer workflow for this artifact.
+const nextPrompt = `Run the Evidence Map workflow for this artifact.
 
-Use .Codex/commands/trust-layer.md as the operating procedure.
+Use .Codex/commands/evidence-map.md as the operating procedure.
 Use ${outputDir}/01-setup-check/setup-check.md as the setup check.
 Use ${outputDir}/01-setup-check/intake.md as the intake.
 Start at Stage 0 and confirm the setup check is ready before analyzing sources.

@@ -1,18 +1,18 @@
 {
-  "name": "trust-layer",
+  "name": "evidence-map",
   "version": "0.1.0",
-  "description": "Portable Trust Layer kit for source-grounded AI deliverables.",
+  "description": "Portable Evidence Map kit for source-grounded AI deliverables.",
   "license": "MIT",
   "type": "module",
   "author": "Matt Weigand",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattdweigand-sketch/trust-layer.git"
+    "url": "git+https://github.com/mattdweigand-sketch/evidence-map.git"
   },
   "bugs": {
-    "url": "https://github.com/mattdweigand-sketch/trust-layer/issues"
+    "url": "https://github.com/mattdweigand-sketch/evidence-map/issues"
   },
-  "homepage": "https://mattdweigand-sketch.github.io/trust-layer/",
+  "homepage": "https://mattdweigand-sketch.github.io/evidence-map/",
   "engines": {
     "node": ">=20"
   },

@@ -1,6 +1,6 @@
 # Security
 
-Trust Layer is designed to work with sensitive source material. Treat source files, generated deliverables, and evidence maps as potentially confidential.
+Evidence Map is designed to work with sensitive source material. Treat source files, generated deliverables, and evidence maps as potentially confidential.
 
 ## Reporting Issues
 

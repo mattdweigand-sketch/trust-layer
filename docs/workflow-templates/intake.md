@@ -1,6 +1,6 @@
-# Trust Layer Intake
+# Evidence Map Intake
 
-Use this template when starting a new Trust Layer run.
+Use this template when starting a new Evidence Map run.
 
 The easiest way to create this file is:
 
@@ -54,9 +54,9 @@ S03:
 The repo-tied chat should run this automatically after setup:
 
 ```text
-Run the Trust Layer workflow for this artifact.
+Run the Evidence Map workflow for this artifact.
 
-Use .Codex/commands/trust-layer.md as the operating procedure.
+Use .Codex/commands/evidence-map.md as the operating procedure.
 Start with the setup check.
 Do not analyze sources until the setup check is ready.
 Do not create the final artifact until I approve the source packet, file spec, and hostile review.

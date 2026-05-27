@@ -2,7 +2,7 @@
 
 ## Repo-Tied Chat Usage
 
-Use `.Codex/commands/trust-layer.md` when a chat session should conduct the workflow.
+Use `.Codex/commands/evidence-map.md` when a chat session should conduct the workflow.
 
 The command turns the prompt set into a staged process:
 

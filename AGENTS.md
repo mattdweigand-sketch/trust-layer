@@ -1,6 +1,6 @@
-# trust-layer
+# evidence-map
 
-Reusable Trust Layer kit for turning messy source folders into trustworthy Office artifacts.
+Reusable Evidence Map kit for turning messy source folders into trustworthy Office artifacts.
 
 ## What This Is
 
@@ -9,7 +9,7 @@ This repo packages workflows, prompts, schemas, examples, and lightweight valida
 Core rule:
 
 ```text
-Truth layer first. Artifact second.
+Evidence first. Artifact second.
 ```
 
 Every material claim should trace back to source IDs, assumptions, dates, owners, and review status.
@@ -29,7 +29,7 @@ To start a new deliverable workflow:
 npm run setup
 ```
 
-For repo-tied chat workflows, use `.Codex/commands/trust-layer.md`.
+For repo-tied chat workflows, use `.Codex/commands/evidence-map.md`.
 
 ## Deliverable Workflow
 
@@ -91,4 +91,4 @@ deliverables/<project-name>/
 - `README.md` — user-facing overview
 - `docs/workflow.md` — full staged workflow
 - `docs/office-risk-taxonomy.md` — failure modes this kit catches
-- `.Codex/commands/trust-layer.md` — repo-tied chat procedure
+- `.Codex/commands/evidence-map.md` — repo-tied chat procedure

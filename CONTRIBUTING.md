@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering a contribution to Trust Layer.
+Thanks for considering a contribution to Evidence Map.
 
 ## What Belongs Here
 

@@ -1,4 +1,4 @@
-# Trust Layer Workflow
+# Evidence Map Workflow
 
 Run this whenever the user wants to create a deliverable from source files: deck, workbook, document, questionnaire, memo, or review report.
 

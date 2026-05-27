@@ -1,25 +1,25 @@
-# Trust Layer
+# Evidence Map
 
-[![Validate](https://github.com/mattdweigand-sketch/trust-layer/actions/workflows/validate.yml/badge.svg)](https://github.com/mattdweigand-sketch/trust-layer/actions/workflows/validate.yml)
+[![Validate](https://github.com/mattdweigand-sketch/evidence-map/actions/workflows/validate.yml/badge.svg)](https://github.com/mattdweigand-sketch/evidence-map/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Trust Layer is a portable kit for creating AI-assisted work artifacts that can be audited after they look finished.
+Evidence Map is a portable kit for creating AI-assisted work artifacts that can be audited after they look finished.
 
 It is built for source-heavy deliverables: board decks, diligence summaries, workbook reviews, questionnaires, memos, operating reviews, and status reports.
 
 Core rule:
 
 ```text
-Truth layer first. Artifact second.
+Evidence first. Artifact second.
 ```
 
-Before drafting the polished artifact, Trust Layer asks for a source packet, a file specification, an evidence map, and a hostile review. The final output should show what it relies on, what is inferred, what is stale, and what still needs human judgment.
+Before drafting the polished artifact, Evidence Map asks for a source packet, a file specification, an evidence map, and a hostile review. The final output should show what it relies on, what is inferred, what is stale, and what still needs human judgment.
 
 ## Why It Exists
 
 AI can make a deck, memo, or workbook look complete before the facts are actually traceable.
 
-Trust Layer reduces that risk by separating three jobs:
+Evidence Map reduces that risk by separating three jobs:
 
 1. Inventory the source material.
 2. Map material claims back to evidence.
@@ -50,10 +50,10 @@ npm run setup
 For a repo-tied AI chat, use:
 
 ```text
-Run the Trust Layer workflow for this deliverable.
+Run the Evidence Map workflow for this deliverable.
 ```
 
-The operating procedure lives in `.Codex/commands/trust-layer.md`.
+The operating procedure lives in `.Codex/commands/evidence-map.md`.
 
 ## Workflow
 
@@ -84,7 +84,7 @@ The stages are:
 - `docs/`: concepts, workflow, risk taxonomy, and workflow templates
 - `kits/`: reusable modules for source packets, evidence maps, decks, workbooks, and review
 - `prompts/`: staged prompt templates
-- `schemas/`: JSON schemas for structured Trust Layer artifacts
+- `schemas/`: JSON schemas for structured Evidence Map artifacts
 - `scripts/`: setup helpers and deterministic validators
 - `examples/`: synthetic examples used by the validators
 - `deliverables/`: local generated outputs, ignored by Git except for `.gitkeep`
@@ -100,7 +100,7 @@ npm run validate:examples
 Try the artificial source folder:
 
 ```text
-Run the Trust Layer workflow.
+Run the Evidence Map workflow.
 Use examples/artificial-test-documents as the source folder.
 The target artifact is a 5-slide board update deck for the May 2026 board meeting.
 Start with the source packet and stop before the file spec.

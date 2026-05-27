@@ -57,7 +57,7 @@ function runValidation() {
 
 function explainWorkflow() {
   section("Step 2: Understand the workflow");
-  console.log("Trust Layer works in gates:");
+  console.log("Evidence Map works in gates:");
   console.log("0. Setup check: confirm the goal, sources, output folder, final format, reviewer, and approvals.");
   console.log("1. Source packet: list what the sources say, with IDs like S01 and S02.");
   console.log("2. File spec: decide the artifact structure before writing or formatting.");
@@ -65,11 +65,11 @@ function explainWorkflow() {
   console.log("4. Evidence map: connect important claims back to source IDs.");
   console.log("5. Hostile review: look for unsupported claims, stale data, and hidden assumptions.");
   console.log("6. Final deliverable: produce the final output after review issues are resolved or accepted.");
-  console.log("\nThe rule is: truth layer first, artifact second.");
+  console.log("\nThe rule is: evidence first, artifact second.");
 }
 
 async function collectIntake() {
-  section("Step 3: Start a Trust Layer run");
+  section("Step 3: Start an Evidence Map run");
   console.log("Answer these once. Setup will create the starter files in deliverables/.");
 
   const artifactType = await askRequired("Artifact type");
@@ -81,7 +81,7 @@ async function collectIntake() {
   const deadline = await ask("Deadline", "TBD");
   const projectName = await ask(
     "Project name",
-    slugify(useCase || artifactType || "trust-layer-run")
+    slugify(useCase || artifactType || "evidence-map-run")
   );
 
   return {
@@ -149,7 +149,7 @@ Setup status: ready
 - None captured during setup.
 `;
 
-  const intake = `# Trust Layer Intake
+  const intake = `# Evidence Map Intake
 
 ## Artifact Goal
 
@@ -176,9 +176,9 @@ ${sources}
 
 ## Workflow Request
 
-Run the Trust Layer workflow for this artifact.
+Run the Evidence Map workflow for this artifact.
 
-Use .Codex/commands/trust-layer.md as the operating procedure.
+Use .Codex/commands/evidence-map.md as the operating procedure.
 Start with the setup check in ${outputDir}/01-setup-check/setup-check.md.
 Do not analyze sources until the setup check is ready.
 Do not create the final artifact until I approve the source packet, file spec, and hostile review.
@@ -186,9 +186,9 @@ Save outputs under ${outputDir}/.
 Stop and ask me before resolving decision-critical conflicts.
 `;
 
-  const nextPrompt = `Run the Trust Layer workflow for this artifact.
+  const nextPrompt = `Run the Evidence Map workflow for this artifact.
 
-Use .Codex/commands/trust-layer.md as the operating procedure.
+Use .Codex/commands/evidence-map.md as the operating procedure.
 Use ${outputDir}/01-setup-check/setup-check.md as the setup check.
 Use ${outputDir}/01-setup-check/intake.md as the intake.
 Start at Stage 0 and confirm the setup check is ready before analyzing sources.
@@ -207,7 +207,7 @@ This file is an audit artifact. The repo-tied chat should continue from it autom
 }
 
 try {
-  section("Trust Layer setup");
+  section("Evidence Map setup");
   console.log("This command validates the kit, explains the gates, and creates a guided run.");
 
   runValidation();

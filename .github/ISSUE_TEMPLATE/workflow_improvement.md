@@ -1,6 +1,6 @@
 ---
 name: Workflow improvement
-about: Suggest a clearer Trust Layer workflow, prompt, schema, or validator
+about: Suggest a clearer Evidence Map workflow, prompt, schema, or validator
 labels: enhancement
 ---
 
