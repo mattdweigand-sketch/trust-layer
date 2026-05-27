@@ -1,0 +1,66 @@
+{
+  "packet_id": "diligence-folder-example-001",
+  "created_at": "2026-05-27",
+  "artifact_goal": "Create an operational diligence memo from a mixed source folder.",
+  "sources": [
+    {
+      "source_id": "S01",
+      "title": "Management KPI Export Q1 2026",
+      "date": "2026-04-12",
+      "owner": "Management",
+      "type": "xlsx",
+      "status": "current",
+      "authority": "primary",
+      "currentness": "current",
+      "notes": "Primary operating metrics export."
+    },
+    {
+      "source_id": "S02",
+      "title": "Lender Presentation Draft",
+      "date": "2026-03-22",
+      "owner": "Company",
+      "type": "pptx",
+      "status": "draft",
+      "authority": "secondary",
+      "currentness": "stale",
+      "notes": "Contains older revenue chart."
+    },
+    {
+      "source_id": "S03",
+      "title": "CFO Diligence Call Transcript",
+      "date": "2026-04-18",
+      "owner": "Project Team",
+      "type": "transcript",
+      "status": "transcript",
+      "authority": "secondary",
+      "currentness": "current",
+      "notes": "Explains churn assumptions and two pending customer losses."
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "A01",
+      "statement": "Base-case churn remains flat through 2026.",
+      "owner": "Project Team",
+      "status": "placeholder",
+      "confidence": "medium",
+      "source_ids": ["S03"]
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "C01",
+      "description": "S02 shows 2025 revenue at 42M while S01 shows 40.8M.",
+      "source_ids": ["S01", "S02"],
+      "status": "open",
+      "decision_required": true
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Which 2025 revenue figure is approved for the diligence memo?",
+      "owner": "Project Team",
+      "needed_for_artifact": true
+    }
+  ]
+}

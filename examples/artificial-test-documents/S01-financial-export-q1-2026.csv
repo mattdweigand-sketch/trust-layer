@@ -1,0 +1,9 @@
+metric,period,value,unit,owner,source_date,status,notes
+ARR,2026-Q1,48200000,USD,Finance,2026-04-07,current,Finance close export
+Revenue,2026-Q1,11800000,USD,Finance,2026-04-07,current,GAAP revenue
+Gross Margin,2026-Q1,74,percent,Finance,2026-04-07,current,Preliminary close
+Net Revenue Retention,2026-Q1,118,percent,Finance,2026-04-07,current,Customer cohort analysis
+Logo Churn,2026-Q1,3.8,percent,Finance,2026-04-07,current,Annualized logo churn
+Cash Balance,2026-Q1,28400000,USD,Finance,2026-04-07,current,Month-end cash
+Burn Multiple,2026-Q1,1.7,x,Finance,2026-04-07,current,Net burn divided by net new ARR
+Enterprise ARR,2026-Q1,29100000,USD,Finance,2026-04-07,current,Enterprise segment only

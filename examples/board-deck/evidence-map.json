@@ -1,0 +1,45 @@
+{
+  "artifact_id": "board-deck-example-001",
+  "created_at": "2026-05-27",
+  "items": [
+    {
+      "target_id": "SLIDE-01-CLAIM",
+      "artifact_location": "Slide 1 headline",
+      "target_type": "slide_claim",
+      "claim_or_value": "Revenue finished 2025 at 40.8M, below the prior draft deck's 42M figure.",
+      "source_ids": ["S01", "S02"],
+      "source_date": "2026-04-12",
+      "owner": "Project Team",
+      "transformation": "Compared current KPI export against stale lender draft.",
+      "assumption_flag": false,
+      "confidence": "contested",
+      "review_status": "needs_human"
+    },
+    {
+      "target_id": "SLIDE-02-CHART",
+      "artifact_location": "Slide 2 revenue bridge chart",
+      "target_type": "workbook_chart",
+      "claim_or_value": "Revenue bridge uses S01 actuals and excludes S02 draft values.",
+      "source_ids": ["S01"],
+      "source_date": "2026-04-12",
+      "owner": "Finance",
+      "transformation": "Summed monthly actuals by fiscal year.",
+      "assumption_flag": false,
+      "confidence": "high",
+      "review_status": "reviewed"
+    },
+    {
+      "target_id": "SLIDE-03-ASSUMPTION",
+      "artifact_location": "Slide 3 base-case assumptions",
+      "target_type": "slide_claim",
+      "claim_or_value": "Base-case churn remains flat through 2026.",
+      "source_ids": ["S03"],
+      "source_date": "2026-04-18",
+      "owner": "Project Team",
+      "transformation": "Taken from CFO call, not yet approved by steering committee lead.",
+      "assumption_flag": true,
+      "confidence": "medium",
+      "review_status": "needs_human"
+    }
+  ]
+}

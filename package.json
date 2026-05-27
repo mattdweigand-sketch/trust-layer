@@ -1,0 +1,16 @@
+{
+  "name": "trust-layer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "kickoff": "node scripts/kickoff.js",
+    "validate:setup-check": "node scripts/validate-setup-check.js",
+    "validate:source-packet": "node scripts/validate-source-packet.js examples/diligence-folder/source-packet.json",
+    "validate:evidence-map": "node scripts/validate-evidence-map.js examples/board-deck/evidence-map.json",
+    "validate:questionnaire-workbook": "node scripts/validate-evidence-map.js examples/questionnaire-workbook/answer-evidence-map.json",
+    "validate:examples": "npm run validate:source-packet && npm run validate:evidence-map && npm run validate:questionnaire-workbook",
+    "test": "npm run validate:examples"
+  }
+}

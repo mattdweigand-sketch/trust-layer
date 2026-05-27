@@ -1,0 +1,26 @@
+{
+  "artifact_id": "board-deck-example-001",
+  "created_at": "2026-05-27",
+  "issues": [
+    {
+      "issue_id": "I01",
+      "severity": "high",
+      "artifact_location": "Slide 1 headline",
+      "description": "Revenue figure conflicts across current KPI export and stale lender draft. Human must approve the number before sharing.",
+      "source_ids": ["S01", "S02"],
+      "risk_type": "stale_number",
+      "requires_human": true,
+      "recommended_owner": "Project Team"
+    },
+    {
+      "issue_id": "I02",
+      "severity": "medium",
+      "artifact_location": "Slide 3 base-case assumptions",
+      "description": "Flat churn is sourced from transcript discussion but not yet approved as a model assumption.",
+      "source_ids": ["S03"],
+      "risk_type": "assumption_as_fact",
+      "requires_human": true,
+      "recommended_owner": "Steering Committee Lead"
+    }
+  ]
+}

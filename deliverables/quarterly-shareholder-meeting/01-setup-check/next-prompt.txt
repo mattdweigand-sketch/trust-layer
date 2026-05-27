@@ -1,0 +1,10 @@
+Run the Trust Layer workflow for this artifact.
+
+Use .Codex/commands/trust-layer.md as the operating procedure.
+Use deliverables/quarterly-shareholder-meeting/01-setup-check/setup-check.md as the setup check.
+Use deliverables/quarterly-shareholder-meeting/01-setup-check/intake.md as the intake.
+Start at Stage 0 and confirm the setup check is ready before analyzing sources.
+Walk me through every stage to the final deliverable output.
+Do not create the final artifact until I approve the source packet, file spec, and hostile review.
+Save outputs under deliverables/quarterly-shareholder-meeting/.
+Stop and ask me before resolving decision-critical conflicts.

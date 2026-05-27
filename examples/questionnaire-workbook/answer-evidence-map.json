@@ -1,0 +1,32 @@
+{
+  "artifact_id": "questionnaire-workbook-example-001",
+  "created_at": "2026-05-27",
+  "items": [
+    {
+      "target_id": "FUND-C21",
+      "artifact_location": "Company Profile!C21",
+      "target_type": "workbook_cell",
+      "claim_or_value": "Acme Operations Platform",
+      "source_ids": ["S01"],
+      "source_date": "2026-05-20",
+      "owner": "Sales",
+      "transformation": "Direct transcript extraction.",
+      "assumption_flag": false,
+      "confidence": "high",
+      "review_status": "reviewed"
+    },
+    {
+      "target_id": "FUND-C42",
+      "artifact_location": "Operating Metrics!C42",
+      "target_type": "workbook_cell",
+      "claim_or_value": "Quarterly reporting timeline is estimated at 45 days after quarter-end.",
+      "source_ids": ["S01"],
+      "source_date": "2026-05-20",
+      "owner": "Sales",
+      "transformation": "Inferred from source statement that reporting is usually delivered 45 days after period-end.",
+      "assumption_flag": true,
+      "confidence": "medium",
+      "review_status": "needs_human"
+    }
+  ]
+}

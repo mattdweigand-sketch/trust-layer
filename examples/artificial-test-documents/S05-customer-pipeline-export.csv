@@ -1,0 +1,7 @@
+opportunity_id,account,segment,stage,amount_usd,close_quarter,forecast_category,owner,source_date
+OPP-1001,Atlas Manufacturing,Enterprise,Legal Review,1400000,2026-Q2,Commit,Sam Rivera,2026-04-09
+OPP-1002,Northstar Logistics,Enterprise,Proposal,900000,2026-Q2,Best Case,Sam Rivera,2026-04-09
+OPP-1003,Harbor Health,Mid-Market,Negotiation,420000,2026-Q2,Commit,Jules Kim,2026-04-09
+OPP-1004,Civic Bank,Enterprise,Security Review,800000,2026-Q2,Best Case,Sam Rivera,2026-04-09
+OPP-1005,Orchid Foods,Mid-Market,Proposal,310000,2026-Q2,Pipeline,Jules Kim,2026-04-09
+OPP-1006,Peak Energy,Enterprise,Discovery,650000,2026-Q3,Pipeline,Sam Rivera,2026-04-09

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trust-layer.local/schemas/source-packet.schema.json",
+  "title": "Trust Layer Source Packet",
+  "type": "object",
+  "required": ["packet_id", "created_at", "artifact_goal", "sources", "assumptions", "conflicts", "open_questions"],
+  "properties": {
+    "packet_id": { "type": "string" },
+    "created_at": { "type": "string" },
+    "artifact_goal": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "title", "date", "owner", "type", "status", "authority", "currentness"],
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^S[0-9]{2,}$" },
+          "title": { "type": "string" },
+          "date": { "type": "string" },
+          "owner": { "type": "string" },
+          "type": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["current", "superseded", "background", "raw_data", "estimate", "transcript", "draft", "unknown"]
+          },
+          "authority": {
+            "type": "string",
+            "enum": ["primary", "secondary", "background", "unknown"]
+          },
+          "currentness": {
+            "type": "string",
+            "enum": ["current", "stale", "unknown"]
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assumption_id", "statement", "owner", "status", "confidence"],
+        "properties": {
+          "assumption_id": { "type": "string" },
+          "statement": { "type": "string" },
+          "owner": { "type": "string" },
+          "status": { "type": "string", "enum": ["open", "approved", "rejected", "placeholder"] },
+          "confidence": { "type": "string", "enum": ["high", "medium", "low", "contested"] },
+          "source_ids": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": true
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["conflict_id", "description", "source_ids", "status", "decision_required"],
+        "properties": {
+          "conflict_id": { "type": "string" },
+          "description": { "type": "string" },
+          "source_ids": { "type": "array", "items": { "type": "string" } },
+          "status": { "type": "string", "enum": ["open", "resolved", "accepted_unresolved"] },
+          "decision_required": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "owner", "needed_for_artifact"],
+        "properties": {
+          "question": { "type": "string" },
+          "owner": { "type": "string" },
+          "needed_for_artifact": { "type": "boolean" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
