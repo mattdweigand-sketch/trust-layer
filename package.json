@@ -1,8 +1,27 @@
 {
   "name": "trust-layer",
   "version": "0.1.0",
+  "description": "Portable Trust Layer kit for source-grounded AI deliverables.",
+  "license": "MIT",
   "private": true,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdweigand-sketch/trust-layer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattdweigand-sketch/trust-layer/issues"
+  },
+  "homepage": "https://github.com/mattdweigand-sketch/trust-layer#readme",
+  "keywords": [
+    "ai",
+    "audit",
+    "evidence",
+    "office",
+    "provenance",
+    "source-grounded",
+    "verification"
+  ],
   "scripts": {
     "setup": "node scripts/setup.js",
     "kickoff": "node scripts/kickoff.js",

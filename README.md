@@ -107,3 +107,10 @@ Every important claim should show:
 - whether it passed verification
 
 The artifact is not done when it looks finished. It is done when the claims and calculations are inspectable.
+
+## Project Hygiene
+
+- License: MIT
+- Contributions: see `CONTRIBUTING.md`
+- Security and data handling: see `SECURITY.md`
+- Conduct expectations: see `CODE_OF_CONDUCT.md`
