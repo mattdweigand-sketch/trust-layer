@@ -1,57 +1,63 @@
 # Trust Layer
 
-Trust Layer helps you use AI to create important work artifacts without losing track of where the facts came from.
+[![Validate](https://github.com/mattdweigand-sketch/trust-layer/actions/workflows/validate.yml/badge.svg)](https://github.com/mattdweigand-sketch/trust-layer/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Use it when you have a folder of source material and need to produce something polished, such as:
+Trust Layer is a portable kit for creating AI-assisted work artifacts that can be audited after they look finished.
 
-- an executive memo
-- a board or leadership deck
-- a workbook review
-- a diligence summary
-- an operating review
-- a questionnaire response
-- a status update
-- a review report
+It is built for source-heavy deliverables: board decks, diligence summaries, workbook reviews, questionnaires, memos, operating reviews, and status reports.
 
-The basic rule:
+Core rule:
 
 ```text
 Truth layer first. Artifact second.
 ```
 
-That means the AI should not jump straight to the final memo, deck, or workbook. It should first identify the sources, facts, assumptions, conflicts, and open questions.
+Before drafting the polished artifact, Trust Layer asks for a source packet, a file specification, an evidence map, and a hostile review. The final output should show what it relies on, what is inferred, what is stale, and what still needs human judgment.
 
-## How To Use It
+## Why It Exists
 
-Start a chat connected to this repo and provide your source files or source folder.
+AI can make a deck, memo, or workbook look complete before the facts are actually traceable.
 
-Ask the chat:
+Trust Layer reduces that risk by separating three jobs:
+
+1. Inventory the source material.
+2. Map material claims back to evidence.
+3. Review the artifact for unsupported claims, stale numbers, hidden assumptions, and unresolved conflicts.
+
+The result is not a guarantee of truth. It is an audit trail that makes the artifact easier to inspect.
+
+## Quick Start
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the included validation checks:
+
+```bash
+npm test
+```
+
+Start a guided deliverable workflow:
+
+```bash
+npm run setup
+```
+
+For a repo-tied AI chat, use:
 
 ```text
 Run the Trust Layer workflow for this deliverable.
 ```
 
-The chat should then walk you through the process. It will ask what you are trying to create, who the audience is, where the source files are, and what final format you want.
+The operating procedure lives in `.Codex/commands/trust-layer.md`.
 
-After that, the workflow should continue automatically. You should not need to copy prompts manually from file to file.
+## Workflow
 
-## What The Workflow Does
-
-Each deliverable moves through seven stages:
-
-1. Setup check: confirms the goal, audience, source files, owner, output folder, and approval gates.
-2. Source packet: lists the source materials and separates facts, assumptions, conflicts, and missing context.
-3. File specification: plans the deliverable before drafting it.
-4. Draft deliverable: creates the first version from the approved source packet and file spec.
-5. Evidence map: connects each important claim, number, chart, table, or answer back to source IDs.
-6. Hostile review: checks for unsupported claims, stale numbers, hidden assumptions, and unresolved conflicts.
-7. Final deliverable output: creates the final version and records any accepted risks.
-
-## Where The Work Goes
-
-Every run is saved under `deliverables/<project-name>/`.
-
-Inside that folder, each stage has its own numbered folder:
+Each run creates numbered audit folders under `deliverables/<project-name>/`:
 
 ```text
 01-setup-check/
@@ -63,54 +69,48 @@ Inside that folder, each stage has its own numbered folder:
 07-final-deliverable/
 ```
 
-This makes it easy to audit the work later. You can open the folders in order and see how the final artifact was created.
+The stages are:
 
-## What Is In This Repo
+1. Setup check: confirm goal, audience, source files, final format, owner, and approval gates.
+2. Source packet: list sources, facts, assumptions, conflicts, stale material, and missing context.
+3. File specification: plan the artifact before drafting it.
+4. Draft deliverable: create the first artifact from the approved source packet and spec.
+5. Evidence map: connect claims, numbers, charts, cells, and tables to source IDs.
+6. Hostile review: enumerate unsupported claims and evidence issues.
+7. Final deliverable: produce the final version and record accepted risks.
 
-This repo contains the reusable pieces that make the workflow work:
+## Repository Map
 
-- `prompts/`: instructions the AI uses at each stage
-- `schemas/`: rules for structured files like source packets and evidence maps
-- `scripts/`: small checks that validate key files
-- `kits/`: reusable guidance for decks, workbooks, evidence maps, and reviews
-- `examples/`: small sample inputs and outputs
-- `docs/`: deeper explanation of the workflow and risk types
+- `docs/`: concepts, workflow, risk taxonomy, and workflow templates
+- `kits/`: reusable modules for source packets, evidence maps, decks, workbooks, and review
+- `prompts/`: staged prompt templates
+- `schemas/`: JSON schemas for structured Trust Layer artifacts
+- `scripts/`: setup helpers and deterministic validators
+- `examples/`: synthetic examples used by the validators
+- `deliverables/`: local generated outputs, ignored by Git except for `.gitkeep`
 
-## For Local Setup
+## Examples
 
-If you are running this repo locally, install dependencies once:
-
-```bash
-npm install
-```
-
-To start a guided deliverable setup:
-
-```bash
-npm run setup
-```
-
-To check that the included examples are valid:
+Validate the included source packet and evidence map examples:
 
 ```bash
-npm test
+npm run validate:examples
 ```
 
-## Core Standard
+Try the artificial source folder:
 
-Every important claim should show:
-
-- where it came from
-- when the source was created
-- whether it is a fact, estimate, inference, or assumption
-- who owns review
-- whether it passed verification
-
-The artifact is not done when it looks finished. It is done when the claims and calculations are inspectable.
+```text
+Run the Trust Layer workflow.
+Use examples/artificial-test-documents as the source folder.
+The target artifact is a 5-slide board update deck for the May 2026 board meeting.
+Start with the source packet and stop before the file spec.
+```
 
 ## Project Hygiene
 
 - License: MIT
-- Contributions: see `CONTRIBUTING.md`
+- Contributing: see `CONTRIBUTING.md`
 - Security and data handling: see `SECURITY.md`
 - Conduct expectations: see `CODE_OF_CONDUCT.md`
+
+Do not commit private source files, generated deliverables, local paths, customer data, or proprietary business context.

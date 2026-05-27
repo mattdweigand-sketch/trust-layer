@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Portable Trust Layer kit for source-grounded AI deliverables.",
   "license": "MIT",
-  "private": true,
   "type": "module",
+  "author": "Matt Weigand",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattdweigand-sketch/trust-layer.git"
@@ -12,7 +12,24 @@
   "bugs": {
     "url": "https://github.com/mattdweigand-sketch/trust-layer/issues"
   },
-  "homepage": "https://github.com/mattdweigand-sketch/trust-layer#readme",
+  "homepage": "https://mattdweigand-sketch.github.io/trust-layer/",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    ".Codex/commands",
+    "docs",
+    "examples",
+    "kits",
+    "prompts",
+    "schemas",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
+  ],
   "keywords": [
     "ai",
     "audit",

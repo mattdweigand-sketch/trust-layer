@@ -1,0 +1,5 @@
+title: Trust Layer
+description: Source-grounded workflows for AI-assisted deliverables.
+theme: minima
+plugins:
+  - jekyll-seo-tag
