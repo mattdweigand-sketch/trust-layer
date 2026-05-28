@@ -15,6 +15,20 @@ Evidence first. Artifact second.
 
 Before drafting the polished artifact, Evidence Map asks for a source packet, a file specification, an evidence map, and a hostile review. The final output should show what it relies on, what is inferred, what is stale, and what still needs human judgment.
 
+## What Evidence Mapping Means
+
+Evidence mapping is how this repo makes AI work auditable.
+
+AI can produce a deck, memo, workbook, or document that looks finished even when the evidence underneath is weak. Evidence mapping prevents that by making every important claim point back to its source.
+
+In this repo, a claim cannot just sit in the final artifact. It needs a source ID, date, owner, confidence level, and review status. If it is inferred, estimated, assumed, or unsupported, it has to say so.
+
+The workflow enforces the order: source packet, file specification, draft deliverable, evidence map, hostile review, final output.
+
+The validators are small scripts that check whether the evidence-mapping files are structured correctly. They do not prove the claim is true. They check that the trust layer is complete enough to review: source IDs are present, dates and owners are captured, confidence is labeled, assumptions and conflicts reference real sources, and numeric claims are not floating around without source dates.
+
+That is the point of the repo: make unsupported claims visible before polished AI work gets shipped.
+
 ## Why It Exists
 
 AI can make a deck, memo, or workbook look complete before the facts are actually traceable.
